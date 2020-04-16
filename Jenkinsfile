@@ -31,8 +31,11 @@ pipeline {
 
                 
               //sh './mvnw cargo:run -P tomcat70'
-              sh 'deploy adapters: [tomcat7(credentialsId: "TomcatCred", path: "", url: "http://34.67.246.242:7070/")], contextPath: "jpetstore", war: "target/JPetStore.war"'
-               
+              sh '''
+              
+              deploy adapters: [tomcat7(credentialsId: 'TomcatCred', path: '', url: 'http://34.67.246.242:7070/')], contextPath: '/jpetstore', war: 'target/JPetStore.war'
+              
+              '''
 
             }
             }
