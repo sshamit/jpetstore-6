@@ -31,11 +31,13 @@ pipeline {
 
                 
               //sh './mvnw cargo:run -P tomcat70'
-              sh '''
+              //sh '''
               
-              deploy adapters: [tomcat7(credentialsId: 'TomcatCred', path: '', url: 'http://34.67.246.242:7070/')], contextPath: '/jpetstore', war: 'target/JPetStore.war'
+              //deploy adapters: [tomcat7(credentialsId: 'TomcatCred', path: '', url: 'http://34.67.246.242:7070/')], contextPath: '/jpetstore', war: 'target/JPetStore.war'
               
-              '''
+              //'''
+                
+              sh 'cp target/JPetStore.war /home/dineshreddy99077/noida/apache-tomcat-7.0.103/webapps/'
 
             }
             }
