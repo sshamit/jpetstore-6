@@ -29,7 +29,7 @@ pipeline {
            
             steps {
 
-                
+              sh 'who am i'  
               //sh './mvnw cargo:run -P tomcat70'
               //sh '''
               
