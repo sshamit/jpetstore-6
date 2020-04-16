@@ -23,7 +23,16 @@ pipeline {
             }
 
          }
-        
+        stage ('sonar') {
+
+            steps {
+
+
+                    sh 'sonar-scanner'
+
+            }
+
+         }        
         stage ('deploy') {
             
            
