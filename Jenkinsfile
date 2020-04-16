@@ -29,7 +29,8 @@ pipeline {
            
             steps {
 
-              sh 'whoami'  
+              sh 'rm -rf /home/dineshreddy99077/noida/apache-tomcat-7.0.103/webapps/JPetStore'
+              sh 'rm -f /home/dineshreddy99077/noida/apache-tomcat-7.0.103/webapps/JPetStore.war' 
                 
               sh 'cp target/JPetStore.war /home/dineshreddy99077/noida/apache-tomcat-7.0.103/webapps/'
 
