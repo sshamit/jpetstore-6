@@ -23,16 +23,17 @@ pipeline {
             }
 
          }
-        stage ('sonar') {
+//        stage ('sonar') {
 
-            steps {
+//            steps {
 
 
-                    sh 'sonar-scanner'
+  //                  sh 'sonar-scanner'
 
-            }
+  //          }
 
-         }        
+  //       }     
+        
         stage ('deploy') {
             
            
