@@ -29,10 +29,8 @@ pipeline {
            
             steps {
 
-
-              sh 'cp ./target/jpetstore.war /home/dineshreddy99077/noida/apache-tomcat-7.0.103/webapps/'
                 
-              sh './mvnw deploy'
+              sh './mvnw cargo:run -P tomcat70'
                
 
             }
