@@ -28,7 +28,7 @@ pipeline {
             steps {
 
 
-                    sh 'sonar-scanner'
+                    sh '/opt/apps/devops/sonar-scanner-4.2.0.1873-linux/bin/sonar-scanner'
 
             }
 
