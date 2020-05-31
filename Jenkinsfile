@@ -15,7 +15,7 @@ pipeline {
 
             steps {
 
-
+                    sh 'echo "hello"'
                    // sh './mvnw test'
 
             }
