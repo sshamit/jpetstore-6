@@ -7,7 +7,7 @@ pipeline {
         
         stage ('checkout'){
             steps {
-            git  'https://github.com/sshamit/jpetstore-6.git'
+            git  'https://github.com/Dharani61/jpetstore-6.git'
             }
         }
 
@@ -37,7 +37,7 @@ pipeline {
             steps {
 
 
-                    sh '/opt/apps/devops/sonar-scanner-4.2.0.1873-linux/bin/sonar-scanner'
+                    sh '/opt/apps/sonar-scanner-4.6.0.2311-linux/bin/sonar-scanner'
 
             }
 
