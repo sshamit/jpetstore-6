@@ -52,8 +52,14 @@ pipeline {
 
 				rtUpload (
 				    serverId: 'ARTIFACTORY_SERVER1',
-				    specPath: 'target/jpetstore.war',
-				    failNoOp: true,
+				    spec: '''{
+					  "files": [
+					    {
+					      "pattern": "**/*.war",
+					      "target": "target/"
+					    }
+					 ]
+				    }''',
 				    buildName: "${BUILD_DISPLAY_NAME}",
 				    buildNumber: "${BUILD_NUMBER}"
 				)
