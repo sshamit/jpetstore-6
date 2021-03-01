@@ -60,7 +60,7 @@ pipeline {
 					    }
 					 ]
 				    }''',
-				    buildName: "${BUILD_DISPLAY_NAME}",
+				    buildName: "${BUILD_ID}",
 				    buildNumber: "${BUILD_NUMBER}"
 				)
 
