@@ -56,7 +56,7 @@ pipeline {
 					  "files": [
 					    {
 					      "pattern": "**/*.war",
-					      "target": "target/"
+					      "target": "tadarepository/"
 					    }
 					 ]
 				    }''',
