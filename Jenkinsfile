@@ -32,16 +32,46 @@ pipeline {
             }
 
          }
-        stage ('sonar') {
+                stage ('Artifactory configuration') {
 
-            steps {
+                steps {
+
+                rtServer (
+
+                    id: "ARTIFACTORY_SERVER1",
+
+                    url: "https://tadadharani.jfrog.io/artifactory",
+
+                    credentialsId: 'jfrog-cred'
+                    //username: 'admin',
+ 				    //password: 'A@runa11''
+
+                )
 
 
-                    sh '/opt/apps/sonar-scanner-4.6.0.2311-linux/bin/sonar-scanner'
+
+				rtUpload (
+				    serverId: 'ARTIFACTORY_SERVER1',
+				    specPath: 'target/jpetstore.war',
+				    failNoOp: true,
+				    buildName: "${BUILD_DISPLAY_NAME}",
+				    buildNumber: "${BUILD_NUMBER}"
+				)
+
 
             }
 
-         }     
+        }
+        //stage ('sonar') {
+
+          //  steps {
+
+
+            //        sh '/opt/apps/sonar-scanner-4.6.0.2311-linux/bin/sonar-scanner'
+
+            //}
+
+         //}     
         
         
      
